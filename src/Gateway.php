@@ -14,54 +14,44 @@ class Gateway extends AbstractGateway
         return 'CoinPayments';
     }
 
-    public function getAccount()
+    public function getMerchantId()
     {
-        return $this->getParameter('account');
+        return $this->getParameter('merchant_id');
     }
 
-    public function setAccount($value)
+    public function setMerchantId($value)
     {
-        return $this->setParameter('account', $value);
+        return $this->setParameter('merchant_id', $value);
     }
 
-    public function getApiId()
+    public function getPrivateKey()
     {
-        return $this->getParameter('api_id');
+        return $this->getParameter('private_key');
     }
 
-    public function setApiId($value)
+    public function setPrivateKey($value)
     {
-        return $this->setParameter('api_id', $value);
+        return $this->setParameter('private_key', $value);
     }
 
-    public function getApiSecret()
+    public function getPublicKey()
     {
-        return $this->getParameter('api_secret');
+        return $this->getParameter('public_key');
     }
 
-    public function setApiSecret($value)
+    public function setPublicKey($value)
     {
-        return $this->setParameter('api_secret', $value);
+        return $this->setParameter('public_key', $value);
     }
 
-    public function getShopId()
+    public function getIpnSecret()
     {
-        return $this->getParameter('shop_id');
+        return $this->getParameter('ipn_secret');
     }
 
-    public function setShopId($value)
+    public function setIpnSecret($value)
     {
-        return $this->setParameter('shop_id', $value);
-    }
-
-    public function getShopSecret()
-    {
-        return $this->getParameter('shop_secret');
-    }
-
-    public function setShopSecret($value)
-    {
-        return $this->setParameter('shop_secret', $value);
+        return $this->setParameter('ipn_secret', $value);
     }
 
     public function getDefaultParameters()
