@@ -6,20 +6,17 @@ use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RedirectResponseInterface;
 use Omnipay\Common\Message\RequestInterface;
 
-class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
+class APIPurchaseResponse extends APIResponse implements RedirectResponseInterface
 {
-    protected $redirectUrl;
+    /* protected $redirectUrl;
 
     public function __construct(RequestInterface $request, $data, $redirectUrl)
     {
         parent::__construct($request, $data);
         $this->redirectUrl = $redirectUrl;
-    }
+    } */
 
-    public function isSuccessful()
-    {
-        return $this->data;
-    }
+    
 
     public function isRedirect()
     {
