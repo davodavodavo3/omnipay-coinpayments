@@ -44,7 +44,25 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('ipn_secret', $value);
     }
 
+    public function getItemName()
+    {
+        return $this->getParameter('item_name');
+    }
 
+    public function setItemName($value)
+    {
+        return $this->setParameter('item_name', $value);
+    }
+	
+    public function getInovice()
+    {
+        return $this->getParameter('invoice');
+    }
+
+    public function setIinvoice($value)
+    {
+        return $this->setParameter('invoice', $value);
+    }
 
     public function getData()
     {
@@ -55,7 +73,8 @@ class PurchaseRequest extends AbstractRequest
         $data['merchant'] = $this->getMerchantId();
         $data['currency'] = $this->getCurrency();
         $data['amountf'] = $this->getAmount();
-        $data['item_name'] = $this->getDescription();
+        $data['item_name'] = $this->getItemName();
+	$data['invoice'] = $this->getInvoice();
         $data['cancel_url'] = $this->getCancelUrl();
      
         return $data;
