@@ -53,8 +53,8 @@ class PurchaseRequest extends AbstractRequest
     {
         return $this->setParameter('item_name', $value);
     }
-	
-    public function getInovice()
+
+    public function getInvoice()
     {
         return $this->getParameter('invoice');
     }
@@ -74,9 +74,9 @@ class PurchaseRequest extends AbstractRequest
         $data['currency'] = $this->getCurrency();
         $data['amountf'] = $this->getAmount();
         $data['item_name'] = $this->getItemName();
-	$data['invoice'] = $this->getInvoice();
+        $data['invoice'] = $this->getInvoice();
         $data['cancel_url'] = $this->getCancelUrl();
-     
+
         return $data;
     }
 
