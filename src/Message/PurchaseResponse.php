@@ -18,12 +18,12 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
 
     public function isSuccessful()
     {
-        return $this->data;
+        return false;
     }
 
     public function isRedirect()
     {
-        return false;
+        return true;
     }
 
     public function getRedirectUrl()
