@@ -84,14 +84,15 @@ class APIPurchaseRequest extends AbstractRequest
         $data['private_key'] = $this->getPrivateKey();
         $data['format'] = 'json'; //supported values are json and xml
 
-		$data['amount'] = $this->getAmount();
-		$data['currency1'] = $this->getCurrency();
-		$data['currency2'] = $this->getCurrency2();
+        $data['amount'] = $this->getAmount();
+	$data['currency1'] = $this->getCurrency();
+	$data['currency2'] = $this->getCurrency2();
 
         $data['buyer_email'] = $this->getBuyerEmail();
         $data['buyer_name'] = $this->getBuyerName();
         $data['item_name'] = $this->getItemName();
-
+        $data['invoice'] = $this->getTransactionId();
+	    
         return $data;
     }
 
