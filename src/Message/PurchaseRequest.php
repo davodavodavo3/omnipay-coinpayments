@@ -66,6 +66,7 @@ class PurchaseRequest extends AbstractRequest
         $data['item_name'] = $this->getItemName();
         $data['invoice'] = $this->getTransactionId();
         $data['cancel_url'] = $this->getCancelUrl();
+		$data['success_url'] = $this->getReturnUrl();
 
         return $data;
     }
